@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gilroy-Medium, sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  /* max-width: 1380px; */
+  margin: 0 auto;
+}
+.mouse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s; */
+  /* transition: 0.1s; */
+  mix-blend-mode: difference;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 2.5vw 2.5vw;
+  background-color: #000;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+main {
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex; /* important */
+  flex-direction: column; /* important */
+}
+
+/* Heading */
+.heading {
+  padding: 13vw 1.5vw 1.5vw;
+  position: relative;
+}
+/* Overlay1 */
+.overlay1 {
+  width: fit-content; /* important */
+  overflow: hidden;
+}
+.overlay1 .overlayElem {
+  transform: translateY(100%);
+}
+.overlay1 .overlayElem2 {
+  transform: translateY(-100%);
+}
+
+.heading h1 {
+  font-size: 11vw;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.6;
+}
+.block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content; /* important */
+}
+/* .block-text h1 {
+  line-height: 8vw;
+} */
+.block-text h4 {
+  font-size: 1.1vw;
+  /* margin-top: 1vw; */
+}
+.block-text h1 {
+  margin-left: 12vw;
+}
+.middle-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 7.5vw;
+  padding-right: 0;
+}
+
+/*
+The margin-left: auto; CSS rule is a way to achieve alignment within a flex container. 
+When applied to a flex item (like your h4 element), it pushes that item to the end of the 
+flex container along the main axis.
+
+In a flex container, there are three properties that control the alignment of flex items 
+along the main axis: justify-content, align-items, and align-self. When you set margin-left: auto; 
+on a flex item, it has a similar effect to setting justify-content: flex-end; on the container
+
+*/
+.middle-heading h4 {
+  color: #fff;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  line-height: 1.7;
+  width: fit-content;
+  margin-left: auto; /* important */
+}
+
+.lower-heading {
+  padding: 1.5vw;
+  position: absolute; /* important */
+  width: 100%;
+  bottom: 0;
+}
+
+.lower-heading ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lower-heading ul li {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+#second-li {
+  margin-right: 10vw;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Projects ------ */
+.projects {
+  padding-right: 10vw;
+  height: 100vh;
+  width: 100%;
+  padding-top: 10vw;
+  padding-left: 2vw;
+}
+.items {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ffffffb0;
+  padding: 3.5vw 3vw;
+  padding-right: 0;
+  cursor: pointer;
+}
+.items h1 {
+  font-size: 7.5vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.6;
+}
+.items h4 {
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.items:last-child {
+  border-bottom: 1px solid #ffffffb0;
+}
+
+/* projects img */
+.items img {
+  /* display: none; */
+  /* max-height: 140%;
+  max-width: 140%; */
+  height: 140%;
+  /* margin: 0 auto; */
+  position: absolute;
+  z-index: 98;
+  opacity: 0;
+
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* About */
+.about {
+  height: 100vh;
+}
+
+/* Media */
+@media (max-width: 600px) {
+  body {
+    padding: 0 3.5vw;
+  }
+  nav {
+    padding: 4vw 1vw;
+  }
+  nav ul li {
+    font-size: 1rem;
+  }
+}
