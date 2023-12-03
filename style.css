@@ -8,8 +8,8 @@ html,
 body {
   height: 100%;
   background-color: #000;
-  /* max-width: 1380px; */
-  margin: 0 auto;
+
+  /* margin: 0 auto; */
 }
 .mouse {
   position: fixed;
@@ -201,7 +201,7 @@ a {
   opacity: 0;
 
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
 }
 
 /* About */
